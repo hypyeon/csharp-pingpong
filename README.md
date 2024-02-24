@@ -1,5 +1,5 @@
 # Ping Pong
-by Hayeong Pyeon
+by [Hayeong Pyeon](https://hypyeon.github.io/WebDevWebsite/)
 
 ### Description
 - This is an in-class prompt **Ping Pong** provided by Epicodus. 

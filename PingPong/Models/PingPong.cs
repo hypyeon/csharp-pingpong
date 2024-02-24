@@ -1,7 +1,7 @@
-public class PingPong
+namespace PingPong.Models 
 {
-  public class PingPong
+  public class PingPong 
   {
-
+    
   }
 }
