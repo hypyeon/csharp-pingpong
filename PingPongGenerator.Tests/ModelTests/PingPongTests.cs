@@ -34,7 +34,7 @@ namespace PingPongGenerator.Tests
     {
       PingPong newPingPong = new PingPong(5);
       object[] pingInserted = newPingPong.InsertString();
-      CollectionAssert.AreEqual(new object[] {1, 2, "ping", 3, 4, "pong"}, pingInserted);
+      CollectionAssert.AreEqual(new object[] {1, 2, "ping", 4, "pong"}, pingInserted);
     }
   }
 }

@@ -19,12 +19,19 @@ namespace PingPongGenerator.Models
 
     public object[] InsertString()
     {
-      object[] array = GenerateArray();
-      for (int i = 2; i <= value; i += 3)
+      object[] result = GenerateArray();
+      for (int i = 0; i < value; i ++)
       {
-        array[i] = "ping";
+        if ((int)result[i] % 3 == 0 && (int)result[i] % 15 != 0)
+        {
+          result[i] = "ping";
+        } 
+        else if ((int)result[i] % 5 == 0 && (int)result[i] % 15 != 0)
+        {
+          result[i] = "pong";
+        }
       }
-      return array;
+      return result;
     }
   }
 }
