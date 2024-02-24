@@ -2,14 +2,19 @@ namespace PingPongGenerator.Models
 {
   public class PingPong 
   {
-    public int[] PingPongArray { get; }
+    public int value { get; }
     public PingPong(int num)
     {
-      PingPongArray = new int[num];
-      for (int i = 0; i < num; i++)
+      value = num;
+    }
+    public int[] GenerateArray()
+    {
+      int[] result = new int[value];
+      for (int i = 0; i < value; i++)
       {
-        PingPongArray[i] = i + 1;
+        result[i] = i + 1;
       }
+      return result;
     }
   }
 }

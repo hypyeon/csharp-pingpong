@@ -7,12 +7,18 @@ namespace PingPongGenerator.Tests
   public class PingPongTests
   {
     [TestMethod]
-    public void PingPongConstructor_CreatesAnArrayOfNumbersFromOneToParenNum_PingPong()
+    public void PingPongConstructor_GetsANumber_PingPong()
     {
-      int num = 8;
-      PingPong newPingPong = new PingPong(num);
-      int[] result = {1, 2, 3, 4, 5, 6, 7, 8};
-      CollectionAssert.AreEqual(newPingPong.PingPongArray, result);
+      PingPong newPingPong = new PingPong(5);
+      Assert.AreEqual(typeof(PingPong), newPingPong.GetType());
+    }
+
+    [TestMethod]
+    public void GenerateArray_CreatesAnArrayOfNumbersFromOneToParenNum()
+    {
+      PingPong newPingPong = new PingPong(5);
+      int[] array = newPingPong.GenerateArray();
+      CollectionAssert.AreEqual(new int[] {1, 2, 3, 4, 5}, array);
     }
   }
 }
