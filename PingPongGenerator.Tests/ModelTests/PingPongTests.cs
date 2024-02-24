@@ -36,5 +36,13 @@ namespace PingPongGenerator.Tests
       object[] pingInserted = newPingPong.InsertString();
       CollectionAssert.AreEqual(new object[] {1, 2, "ping", 4, "pong"}, pingInserted);
     }
+
+    [TestMethod]
+    public void InsertString_ReplacesFifteenByStringPingPong()
+    {
+      PingPong newPingPong = new PingPong(15);
+      object[] pingInserted = newPingPong.InsertString();
+      CollectionAssert.AreEqual(new object[] {1, 2, "ping", 4, "pong", "ping", 7, 8, "ping", "pong", 11, "ping", 13, 14, "ping-pong"}, pingInserted);
+    }
   }
 }

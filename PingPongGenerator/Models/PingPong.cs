@@ -30,6 +30,10 @@ namespace PingPongGenerator.Models
         {
           result[i] = "pong";
         }
+        else if ((int)result[i] % 15 == 0)
+        {
+          result[i] = "ping-pong";
+        }
       }
       return result;
     }
