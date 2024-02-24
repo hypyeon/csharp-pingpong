@@ -17,8 +17,24 @@ namespace PingPongGenerator.Tests
     public void GenerateArray_CreatesAnArrayOfNumbersFromOneToParenNum()
     {
       PingPong newPingPong = new PingPong(5);
-      int[] array = newPingPong.GenerateArray();
-      CollectionAssert.AreEqual(new int[] {1, 2, 3, 4, 5}, array);
+      object[] array = newPingPong.GenerateArray();
+      CollectionAssert.AreEqual(new object[] {1, 2, 3, 4, 5}, array);
+    }
+
+    [TestMethod]
+    public void InsertString_ReplacesThreeByStringPing()
+    {
+      PingPong newPingPong = new PingPong(3);
+      object[] pingInserted = newPingPong.InsertString();
+      CollectionAssert.AreEqual(new object[] {1, 2, "ping"}, pingInserted);
+    }
+
+    [TestMethod]
+    public void InsertString_ReplacesFiveByStringPong()
+    {
+      PingPong newPingPong = new PingPong(5);
+      object[] pingInserted = newPingPong.InsertString();
+      CollectionAssert.AreEqual(new object[] {1, 2, "ping", 3, 4, "pong"}, pingInserted);
     }
   }
 }
